@@ -6,7 +6,7 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/multi-qa-mpnet-base-dot-v1")
 
 #with open(r"C:\Users\Francesco\Desktop\The Psychology of Totalitarianism 2022- Mattias Desmet.txt", encoding='utf-8') as f:
 #    book = f.read()
@@ -14,7 +14,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 #loader = [UnstructuredFileLoader(r"C:\Users\Francesco\Desktop\The Psychology of Totalitarianism 2022- Mattias Desmet.pdf", encoding='utf-8'), UnstructuredFileLoader(r"C:\Users\Francesco\Desktop\The unhappiness machine.pdf", encoding='utf-8')]
 #raw_documents = AnalyticDB.from_documents(loader, )
 
-loader = DirectoryLoader(r"C:\Users\Francesco\Desktop\books", silent_errors=True, show_progress=True)
+loader = DirectoryLoader(r"C:\Users\Francesco\Documents\GITHUB\Self-Hosted-QA\books", silent_errors=True, show_progress=True)
 raw_documents = loader.load()
 
 # Split text
